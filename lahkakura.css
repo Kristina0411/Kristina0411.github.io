@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('ukazka.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.storePage {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.storage {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    margin: 10px;
+}
+
+.storage:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    background-color: #d09c42;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.premiumBenefits {
+    flex: 1;
+    background-color: rgba(63, 209, 217, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    margin: 10px;
+}
+
+.premiumBenefits:hover {
+    transform: scale(1.05);
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
