@@ -92,18 +92,3 @@ body {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 1200px) {
-    .membership-container {
-        width: 95%;
-    }
-
-    .membership-block {
-        width: calc(33.33% - 40px); /* Adjusted width for three blocks in a row with 20px gap */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .membership-block {
-        width: calc(50% - 40px); /* Adjusted width for two blocks in a row with 20px gap */
-    }
-}

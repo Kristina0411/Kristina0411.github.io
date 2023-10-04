@@ -90,9 +90,4 @@ h1 {
     margin: 10px;
 }
 
-/* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
-    .admin-member {
-        margin: 0 10px 20px; /* Adjust margin for smaller screens */
-    }
-}
+
