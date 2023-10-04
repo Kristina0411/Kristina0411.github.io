@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('Minecraft.ttf') format('truetype');
+    /* Add additional font formats here if needed */
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('ukazka.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+#snow {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#snow i {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    animation: snowfall 5s linear infinite reverse;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translate(-10vw, -50vh);
+    }
+
+    100% {
+        transform: translate(10vw, 50vh);
+    }
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.log img {
+    max-width: 30%;
+    max-height: 30%;
+    animation: floatAnimation 2s ease-in-out infinite;
+    margin-right: 20px;
+}
+
+.discord-buttons-left {
+    margin-right: -350px;
+    
+}
+
+.discord-buttons-right {
+    margin-left: -350px;
+    
+    
+}
+
+.buttonsdiscord {
+    display: inline-flex;
+    flex: 1 1 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    cursor: pointer;
+    color: white;
+    padding: 1em;
+    background-color: #2383d100;
+    border-radius: 1rem;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline on focus */
+}
+
+.buttonsdiscord i {
+    font-size: 20px; /* Adjust icon size */
+    margin-right: 5px; /* Margin between icon and text */
+    background-color: #2383d1; /* Blue background color */
+    padding: 5px; /* Padding around the icon */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.buttonsdiscord:hover {
+    /* background-color: #2980b9; */
+}
+
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #2384D1;
+    color: white;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    box-shadow: rgba(var(--text-color), 0.1) 0px 10px 15px -3px, rgba(var(--text-color), 0.05) 0px 4px 6px -2px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.button i {
+    font-size: 36px;
+    margin-bottom: 8px;
+
+}
+
+.button:hover {
+    background-color: #2980b9;
+    
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
