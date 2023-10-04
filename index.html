@@ -4,28 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Aquaville</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="cont">
+        <div id="snow"></div>
         <div class="logo-container">
             <div class="discord-buttons-left">
-                <button class="buttons"><i class="fab fa-discord"></i> Discord server</button>
+                <button class="buttonsdiscord"></i>AQUAVILLE.SK<br>IP 000000000<i class= "fa fa-globe"></i> 
+                </button>
             </div>
             <div class="log">
                 <img src="dd2.png" alt="Logo">
             </div>
             <div class="discord-buttons-right">
-                <button class="buttons"><i class="fab fa-discord"></i> Discord server</button>
+                <a href="https://discord.com/invite/8P8qhmHjjE" style="text-decoration: none;">
+                <button class="buttonsdiscord"><i class="fab fa-discord"></i> Discord server<br>0411 online</button>
+                </a>
             </div>
         </div>
+
+
         <div class="buttons">
-            <button class="button"><i class="fas fa-gavel"></i> Premium</button>
-            <button class="button"><i class="fa fa-book"></i> Náš tým</button>
-            <button class="button"><i class="fas fa-store-alt"></i> Bany</button>
-            <button class="button"><i class="fa fa-thumbs-up"></i> Discord</button>
+            <a href="premium.html" style="text-decoration: none;">
+            <button class="button"><i class="fa fa-book"></i>Prémium</button>
+                </a>
+            <a href="tim.html" style="text-decoration: none;">
+                <button class="button"><i class="fa fa-user"></i>Náš tím</button>
+            </a>
+            <a href="https://aquaville.sk/banlist/" style="text-decoration: none;">
+            <button class="button"><i class="fas fa-gavel"></i>Bany</button>
+            </a>
+            <a href="https://discord.com/invite/8P8qhmHjjE" style="text-decoration: none;">
+            <button class="button"><i class="fab fa-discord"></i>Discord</button>
+            </a>
         </div>
     </div>
+    <script>
+        function snow() {
+     // TWEAK VALUES
+     let amount = 30;   // snowfall thickness (reduce this number for fewer snowflakes)
+     let baseSize = 1;   // smallest size
+     let sizeModifier = 10;   // size variation
+     let baseDuration = 15;   // fall speed, increase to slow down
+     let durationModifier = 10;   // fall speed variation
+     let lowestOpacity = 0.2;  // 0 transparent, 1 opaque
+ 
+     let container = document.getElementById('snow');
+ 
+     let i = 0;
+     while (i < amount) {
+         let flake = document.createElement('i');
+         container.appendChild(flake);
+ 
+         let size = baseSize + Math.random() * sizeModifier;
+         let posX = Math.floor(Math.random() * window.innerWidth);
+         let posY = Math.floor(Math.random() * window.innerHeight);
+         let delay = Math.random() * -20;
+         let duration = Math.random() * durationModifier + baseDuration;
+ 
+         flake.style.width = size + 'px';
+         flake.style.height = size + 'px';
+         flake.style.left = posX + 'px';
+         flake.style.top = posY + 'px';
+         flake.style.animationDelay = delay + 's';
+         flake.style.animationDuration = duration + 's';
+         flake.style.opacity = Math.random() * (1 - lowestOpacity) + lowestOpacity;
+ 
+         i++;
+     }
+ }
+ 
+ snow();
+ 
+ 
+ 
+     </script>
 </body>
 </html>
