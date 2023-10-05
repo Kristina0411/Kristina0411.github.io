@@ -10,6 +10,8 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    
+    color: #fff;
 }
 #snow {
     position: fixed;
@@ -81,15 +83,17 @@ body {
     border-radius: 1rem;
     border: none; 
     outline: none;
-    text-align: left; 
+    text-align: left;
+    font-size: 13px; 
 }
 
 .buttonsdiscord i {
-    font-size: 20px; 
+    font-size: 30px; 
     margin-right: 5px; 
-    background-color: #2383d1; 
-    padding: 5px; 
-    border-radius: 5px; 
+    background-color: #ffffff; 
+    padding: 10px; 
+    border-radius: 1rem; 
+    color: #000000;
 }
 
 
@@ -143,3 +147,261 @@ body {
         transform: translateY(-10px);
     }
 }
+
+.admin-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; 
+    font-family: 'Minecraft';
+    color: #ffffffbd;
+}
+
+.admin-member {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #2384D1;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all 0.3s ease;
+    margin: 0 10px 20px; 
+    max-width: 300px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.admin-member:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+}
+
+.admin-member img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 5px solid #ff9800;
+}
+
+.admin-member h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.admin-member p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin: 0;
+}
+
+.membership-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+    padding: 20px;
+    /* box-sizing: border-box; */
+    text-align: center;
+}
+
+.membership-block {
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffffbd;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(40% - 40px); /* Adjust the width as needed */
+    max-width: 300px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease-in-out;
+    /* box-sizing: border-box; */
+    text-align: left;
+}
+
+.membership-block:hover {
+    transform: scale(1.05);
+}
+
+.membership-block h2 {
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-bottom: 15px;
+    color: #d09c42; /* Set the text color to #d09c42 */
+}
+
+.membership-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membership-block ul li {
+    font-size: 15px; /* Adjust the font size as needed */
+    margin-bottom: 5px;
+}
+
+.membership-block ul li span {
+    font-weight: bold;
+}
+
+.membership-block ul li:before {
+    content: '\2022';
+    color: #ffffff60;
+    margin-right: 5px;
+}
+
+.tim {
+    text-align: center;
+    font-size: 65px; 
+    font-family: "Minecraft", sans-serif; 
+    margin-bottom: 10%;
+    margin-top: 10%;
+    color: #ffffff60;
+}
+.premium {
+    text-align: center; 
+    font-size: 65px; 
+    font-family: "Minecraft", sans-serif; 
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: #ffffff60;
+}
+
+.admin-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; 
+    font-family: 'Minecraft';
+    color: #ffffffbd;
+}
+
+.admin-member1 {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #2384D1;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all 0.3s ease;
+    margin: 0 10px 20px; 
+    max-width: 300px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.admin-member1:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+}
+
+.admin-member1 img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 5px solid #ff0000;
+}
+
+.admin-member1 h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.admin-member1 p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin: 0;
+}
+
+.admin-member2 {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #008cff;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all 0.3s ease;
+    margin: 0 10px 20px; 
+    max-width: 300px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.admin-member2:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+}
+
+.admin-member2 img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 5px solid #ff9800;
+}
+
+.admin-member2 h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.admin-member2 p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.admin-member3 {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #2384D1;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition: all 0.3s ease;
+    margin: 0 10px 20px; 
+    max-width: 300px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.admin-member3:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+}
+
+.admin-member3 img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 5px solid #37ff00;
+}
+
+.admin-member3 h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.admin-member3 p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
