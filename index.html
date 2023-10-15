@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <title>Aquaville</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
 </head>
 <body>
     <div class="cont">
         <div id="snow"></div>
         <div class="logo-container">
             <div class="discord-buttons-left">
-                <button class="buttonsdiscord"></i><b>AQUAVILLE.SK<br>Online</b><i class= "fa fa-globe"></i> 
+                <button class="buttonsdiscord">
+                    <b>AQUAVILLE.SK<br>Online &nbsp;<span id="onlinePlayers"></span></b><i class="fa fa-globe"></i>
                 </button>
             </div>
+            
             <div class="log">
                 <img src="dd2.png" alt="Logo">
             </div>
@@ -42,13 +45,14 @@
             </a>
         </div>
     </div>
+    <div class="cont1" id="cont1">
     <div class="premium" id="prem">
         Premium benefity
     </div>
     <div class="membership-container">
         <div class="membership-block elite">
             
-        <h2 style="color: #d09c42;">ELITE</h2>
+        <h1 style="color: #ffffff; background-color: #d09c42;">ELITE</h1>
     
         <ul>
         <li>Svetlo-oranžový text pri písaní v chate</li>
@@ -76,7 +80,7 @@
         </div>
         <div class="membership-block hero">
             
-        <h2 style="color: #6fbf60">HERO</h2>
+        <h1 style="color: #ffffff; background-color: #6fbf60;">HERO</h1>
         <ul>
         <li>Svetlo-zelený text pri písaní v chate</li>
         <li>Možnosť napojiť sa na plný server</li>
@@ -106,7 +110,7 @@
         </ul>
         </div>
         <div class="membership-block legion">
-        <h2 style="color: #3fd1d9">LEGION</h2>
+        <h1 style="color: #ffffff; background-color: #3fd1d9;">LEGION</h1>
             
         <ul>
         <li>Svetlo-modrý text pri písaní v chate</li>
@@ -135,8 +139,8 @@
         </ul>
         </div>
         <div class="membership-block patron">
-            
-        <h2 style="color: #43d27e">PATRON</h2>
+            <div class="icon"></div>
+        <h1 style="color: #ffffff; background-color: #43d27e;">PATRON</h1>
         <ul>
         <li>Svetlo-zelený text pri písaní v chate</li>
         <li>Jediný rank, ktorý je NAVŽDY</li>
@@ -160,6 +164,8 @@
         </ul>
         </div>
     </div>
+</div>
+<div class="cont2">
     <div class="tim" id="team">
         Admin team
     </div>
@@ -183,6 +189,10 @@
             <p>Text about Admin 3. This can include their role, experience, etc.</p>
         </div>
     </div>
+</div>
+<script>
+
+</script>
     
     <script>
         function snow() {
@@ -224,45 +234,91 @@
  
  
      </script>
-     <script>
-        document.getElementById("scrollToPrem").addEventListener("click", function(event) {
-            event.preventDefault(); 
-            smoothScroll("prem");
-        });
-    
-        document.getElementById("scrollToTeam").addEventListener("click", function(event) {
-            event.preventDefault();
-            smoothScroll("team");
-        });
-    
-        function smoothScroll(targetId) {
-            const targetElement = document.getElementById(targetId);
-            const targetPosition = targetElement.offsetTop;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const duration = 1000; 
-    
-            let start = null;
-            function step(timestamp) {
-                if (!start) start = timestamp;
-                const progress = timestamp - start;
-                window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-                if (progress < duration) {
-                    requestAnimationFrame(step);
-                }
-            }
-    
-            
-            function easeInOutCubic(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t * t + b;
-                t -= 2;
-                return c / 2 * (t * t * t + 2) + b;
-            }
-    
-            requestAnimationFrame(step);
+    <script>
+        // Get the buttons and cont elements by their IDs and class names
+const scrollToPremButton = document.getElementById('scrollToPrem');
+const scrollToTeamButton = document.getElementById('scrollToTeam');
+const cont1 = document.querySelector('.cont1');
+const cont2 = document.querySelector('.cont2');
+
+// Function to scroll smoothly to a specific element
+function smoothScroll(targetElement) {
+    const targetPosition = targetElement.offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Scroll duration in milliseconds
+
+    let start = null;
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
         }
+    }
+    window.requestAnimationFrame(step);
+}
+
+// Easing function for smooth scrolling
+function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+}
+
+// Add click event listener to the button scrollToPrem
+scrollToPremButton.addEventListener('click', function() {
+    // Make cont1 visible and cont2 invisible
+    cont1.style.display = 'block';
+    cont2.style.display = 'none';
+
+    // Scroll to the element with id "prem" with smooth effect
+    const premElement = document.getElementById('prem');
+    smoothScroll(premElement);
+});
+
+// Add click event listener to the button scrollToTeam
+scrollToTeamButton.addEventListener('click', function() {
+    // Make cont2 visible and cont1 invisible
+    cont1.style.display = 'none';
+    cont2.style.display = 'block';
+
+    // Scroll to the element with id "team" with smooth effect
+    const teamElement = document.getElementById('team');
+    smoothScroll(teamElement);
+});
+
     </script>
+
+<script>
+    // Replace 'your-server-ip' with the IP address of your Minecraft server
+    // const serverIP = 'play.vanillaeuropa.com';
+    const serverIP = '82.208.17.84';
+
+    // Function to fetch online players from the Minecraft server
+    function fetchOnlinePlayers() {
+        fetch(`https://api.mcsrvstat.us/2/${serverIP}`)
+            .then(response => response.json())
+            .then(data => {
+                const onlinePlayers = data.players.online;
+                document.getElementById('onlinePlayers').textContent = onlinePlayers;
+            })
+            .catch(error => {
+                console.error('Error fetching online players:', error);
+            });
+    }
+
+    // Fetch online players when the page loads
+    fetchOnlinePlayers();
+
+    // Refresh every 60 seconds (or as desired)
+    setInterval(fetchOnlinePlayers, 60000); // 60000 milliseconds = 1 minute
+</script>
+    
+    
+     
     
     
 </body>

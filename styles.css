@@ -4,14 +4,23 @@
     
 }
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('ukazka.png');
+    background-image: linear-gradient(rgba(42, 45, 55, 0.97), rgba(43, 45, 55, 0.97)), url('ukazka.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    
+    width: 100%;
+    height: 100%;
     color: #fff;
+    /* scroll-behavior: smooth; */
+}
+.cont1, .cont2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
 }
 #snow {
     position: fixed;
@@ -206,7 +215,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
     max-width: auto;
     margin-top: 30px;
@@ -218,10 +227,11 @@ h1 {
 .membership-block {
     background-color: rgba(0, 0, 0, 0);
     color: #ffffffbd;
-    padding: 20px;
+    /* padding: 20px; */
+
     border-radius: 10px;
     width: calc(40% - 40px); /* Adjust the width as needed */
-    max-width: 300px;
+    max-width: 400px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.9);
     transition: transform 0.3s ease-in-out;
     /* box-sizing: border-box; */
@@ -244,8 +254,10 @@ h1 {
 }
 
 .membership-block ul li {
-    font-size: 15px; /* Adjust the font size as needed */
+    font-size: 20px; /* Adjust the font size as needed */
     margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .membership-block ul li span {
@@ -405,3 +417,29 @@ h1 {
     line-height: 1.4;
 }
 
+.crown {
+    position: absolute;
+    left: -20px;
+    top: 0px; 
+    width: 4em;
+    -ms-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+    z-index: 9999;
+}
+
+.membership-block.patron {
+    position: relative;
+    /* Other styles for your membership block */
+}
+
+.icon {
+    position: absolute;
+    top: -48px;
+    left: -27px;
+    width: 80px; /* Set the width of your icon */
+    height: 80px; /* Set the height of your icon */
+    background-image: url('crown.png'); /* URL to your icon */
+    background-size: cover; /* Ensure the icon covers the entire div */
+    -ms-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
