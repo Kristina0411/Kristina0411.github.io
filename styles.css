@@ -63,13 +63,16 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .log img {
-  max-width: 30%;
-  max-height: 30%;
-  animation: floatAnimation 2s ease-in-out infinite;
-  margin-right: 20px;
+  max-width: 37%;
+  max-height: 37%;
+  animation: floatAnimation 3s ease-in-out infinite;
+  margin-right: 65px;
+  margin-left: 45px;
+  /* margin-bottom: 45; */
 }
 
 .discord-buttons-left {
@@ -101,14 +104,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 35px;
   margin-right: 5px;
   background-color: #ffffff;
   padding: 10px;
   border-radius: 1rem;
   color: #000000;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -131,8 +134,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   background-color: #2384d1;
   color: white;
   border: none;
@@ -160,7 +163,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-40px);
   }
 }
 
@@ -449,4 +452,16 @@ h1 {
   background-size: cover;
   -ms-transform: rotate(-25deg);
   transform: rotate(-25deg);
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2C2E3A; 
 }
